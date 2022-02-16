@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Star Wars</title>
+        <title>The Worlds of Lego</title>
       </Head>
 
       <main>
