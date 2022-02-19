@@ -12,7 +12,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 
-const pages = ['Themes', 'Years', 'Minifigs'];
+const pages = ['Sets', 'Themes', 'Years'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const ResponsiveAppBar = () => {
@@ -42,7 +42,7 @@ const ResponsiveAppBar = () => {
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               <Button sx={{ my: 2, color: 'white', display: 'block' }}>
-              <Link href="/themes">Themes</Link>
+              <Link href="/sets">Sets</Link>
               </Button>
           </Box>
 
