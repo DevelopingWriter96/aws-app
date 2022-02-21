@@ -1,0 +1,85 @@
+{
+    "setID": 27797,
+    "number": "75218",
+    "numberVariant": 1,
+    "name": "X-wing Starfighter",
+    "year": 2018,
+    "theme": "Star Wars",
+    "themeGroup": "Licensed",
+    "subtheme": "Episode IV",
+    "category": "Normal",
+    "released": true,
+    "pieces": 731,
+    "minifigs": 4,
+    "image": {
+      "thumbnailURL": "https://images.brickset.com/sets/small/75218-1.jpg",
+      "imageURL": "https://images.brickset.com/sets/images/75218-1.jpg"
+    },
+    "bricksetURL": "https://brickset.com/sets/75218-1",
+    "collection": {
+      
+    },
+    "collections": {
+      "ownedBy": 9590,
+      "wantedBy": 3346
+    },
+    "LEGOCom": {
+      "US": {
+        "retailPrice": 79.99,
+        "dateFirstAvailable": "2018-08-01T00:00:00Z",
+        "dateLastAvailable": "2019-11-30T00:00:00Z"
+      },
+      "UK": {
+        "retailPrice": 89.99,
+        "dateFirstAvailable": "2018-08-01T00:00:00Z",
+        "dateLastAvailable": "2019-12-02T00:00:00Z"
+      },
+      "CA": {
+        "retailPrice": 99.99,
+        "dateFirstAvailable": "2018-08-01T00:00:00Z",
+        "dateLastAvailable": "2019-11-30T00:00:00Z"
+      },
+      "DE": {
+        "retailPrice": 99.99,
+        "dateFirstAvailable": "2018-08-01T00:00:00Z",
+        "dateLastAvailable": "2020-01-14T00:00:00Z"
+      }
+    },
+    "rating": 4.4,
+    "reviewCount": 5,
+    "packagingType": "Box",
+    "availability": "Retail",
+    "instructionsCount": 2,
+    "additionalImageCount": 4,
+    "ageRange": {
+      
+    },
+    "dimensions": {
+      "height": 28.2,
+      "width": 48.0,
+      "depth": 6.1,
+      "weight": 1.06
+    },
+    "barcode": {
+      "EAN": "5702016110661",
+      "UPC": "673419282338"
+    },
+    "extendedData": {
+      "tags": [
+        "Biggs Darklighter|n",
+        "Luke Skywalker|n",
+        "R2-D2|n",
+        "R2-Q2|n",
+        "A New Hope",
+        "Brick Separator",
+        "Converts",
+        "Disney",
+        "Droid",
+        "Original Trilogy",
+        "Rebel Alliance",
+        "Starfighter"
+      ],
+      "description": "<p>Lead the Rebel attack with the LEGOÂ® <i>Star Wars</i> 75218 X-Wing Starfighter. This detailed model has retractable landing gear, an opening minifigure cockpit with a fire extinguisher behind the seat, stud shooters on the side and wing-mounted spring-loaded shooters, space for R2-D2, and a new-for-August-2018 lever function to transition the wings between cruise and attack modes. What's more, this great model also comes with extra stickers and tiles to transform it from Luke Skywalker's Red Five into Biggs Darklighterâ€™s Red Three X-wingâ€¦ so of course Luke and Biggs LEGO minifigures and their astromech droids are included!                                                                                                                                                                                                                                                                                                                                                                                         </p><ul><li> Includes Luke Skywalker and Biggs Darklighter LEGOÂ® minifigure pilots, plus R2-D2 and R2-Q2 droids.</li><li> LEGOÂ® starfighter features retractable landing gear, an opening minifigure cockpit, 2 stud shooters and 4 spring-loaded shooters, space for a droid, and a new-for-August-2018 lever-activated cruise/attack mode function.</li><li> Push the model down in attack mode to close the wings.</li><li> Fit each droid laterally in position (new for August 2018).</li><li> Extra stickers and tiles let you switch between Luke's Red Five and Biggsâ€™ Red Three X-wing designs.</li><li> Weapons include Lukeâ€™s Lightsaber and blaster pistol, and Biggsâ€™ blaster pistol.</li><li> Also includes a fire extinguisher accessory element.</li><li> X-wing in attack mode measures over 4â€ (11cm) high, 13â€ (34cm) long and 11â€ (30cm) wide.</li></ul>"
+    },
+    "lastUpdated": "2018-05-18T02:30:37.297Z"
+  }

@@ -26,9 +26,11 @@ const SetsList = (props) => {
                 <CardMedia component='img' image={set.sets[0].image.imageURL} title = {set.sets[0].name} />
                 <CardContent>
                     <Box>
-                        <Typography variant="subtitle1">{set.sets[0].year}</Typography>
-                        <Typography variant="subtitle1">{set.sets[0].theme}</Typography>
+                        <Typography variant="subtitle1">{set.sets[0].number}</Typography>
+                        <Typography variant="subtitle1">Lego {set.sets[0].theme}</Typography>
                         <Typography variant="subtitle1">{set.sets[0].name}</Typography>
+                        <Typography variant="subtitle1">${set.sets[0].LEGOCom.US.retailPrice} retail</Typography>
+                        <Typography variant="subtitle1">{set.sets[0].pieces} pieces</Typography>
                         <Typography variant="subtitle2">{set.sets[0].extendedData.description}</Typography>
                     </Box>
                 </CardContent>
