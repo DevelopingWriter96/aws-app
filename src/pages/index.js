@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import ResponsiveAppBar from './components/ResponsiveAppBar'
+import ResponsiveAppBar from '../components/ResponsiveAppBar'
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <ResponsiveAppBar/>
+        <ResponsiveAppBar />
         <h1>
           Welcome to my Next.js app!
         </h1>
