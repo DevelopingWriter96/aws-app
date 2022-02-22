@@ -1,0 +1,6 @@
+{
+  "AppSyncApiName": "legoapp",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthModeLastUpdated": "2022-02-22T03:25:50.794Z"
+}

@@ -1,0 +1,97 @@
+type ExtendedData {
+  Tags: [String]
+  Description: String
+}
+
+type Barcode {
+  EAN: String
+  UPC: String
+}
+
+type Dimensions {
+  Height: Float
+  Width: Float
+  Depth: Float
+  Weight: Float
+}
+
+type AgeRange {
+  AgeRange: String
+}
+
+type DE {
+  RetailPrice: Float
+  DateFirstAvaliable: String
+  DateLastAvaliable: String
+}
+
+type CA {
+  RetailPrice: Float
+  DateFirstAvaliable: String
+  DateLastAvaliable: String
+}
+
+type UK {
+  RetailPrice: Float
+  DateFirstAvaliable: String
+  DateLastAvaliable: String
+}
+
+type US {
+  RetailPrice: Float
+  DateFirstAvaliable: String
+  DateLastAvaliable: String
+}
+
+type LEGOCom {
+  US: US
+  UK: UK
+  CA: CA
+  DE: DE
+}
+
+type Collections {
+  OwnedBy: Int
+  WantedBy: Int
+}
+
+type Collection {
+  Collection: String
+}
+
+type Image {
+  ThumbnailURL: String
+  ImageURL: String
+}
+
+type SetData @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  Number: String
+  NumberVariant: Int
+  Name: String
+  Year: Int
+  Theme: String
+  ThemeGroup: String
+  Subtheme: String
+  Category: String
+  Released: Boolean
+  Pieces: Int
+  Minifigs: Int
+  Image: Image
+  BricksetURL: String
+  Collection: Collection
+  Collections: Collections
+  LEGOCom: LEGOCom
+  Rating: Float
+  ReviewCount: Int
+  PackagingType: String
+  Availability: String
+  InstructionsCount: Int
+  AdditionalImageCount: Int
+  AgeRange: AgeRange
+  Dimensions: Dimensions
+  Barcode: Barcode
+  ExtendedData: ExtendedData
+  LastUpdated: String
+}
+ 
