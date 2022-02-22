@@ -1,6 +1,6 @@
 type ExtendedData {
-  tags: [String]
-  description: String
+  Tags: [String]
+  Description: String
 }
 
 type Barcode {
@@ -9,38 +9,38 @@ type Barcode {
 }
 
 type Dimensions {
-  height: Float
-  width: Float
-  depth: Float
-  weight: Float
+  Height: Float
+  Width: Float
+  Depth: Float
+  Weight: Float
 }
 
 type AgeRange {
-  ageRange: String
+  AgeRange: String
 }
 
 type DE {
-  retailPrice: Float
-  dateFirstAvaliable: String
-  dateLastAvaliable: String
+  RetailPrice: Float
+  DateFirstAvaliable: String
+  DateLastAvaliable: String
 }
 
 type CA {
-  retailPrice: Float
-  dateFirstAvaliable: String
-  dateLastAvaliable: String
+  RetailPrice: Float
+  DateFirstAvaliable: String
+  DateLastAvaliable: String
 }
 
 type UK {
-  retailPrice: Float
-  dateFirstAvaliable: String
-  dateLastAvaliable: String
+  RetailPrice: Float
+  DateFirstAvaliable: String
+  DateLastAvaliable: String
 }
 
 type US {
-  retailPrice: Float
-  dateFirstAvaliable: String
-  dateLastAvaliable: String
+  RetailPrice: Float
+  DateFirstAvaliable: String
+  DateLastAvaliable: String
 }
 
 type LEGOCom {
@@ -51,47 +51,47 @@ type LEGOCom {
 }
 
 type Collections {
-  ownedBy: Int
-  wantedBy: Int
+  OwnedBy: Int
+  WantedBy: Int
 }
 
 type Collection {
-  collection: String
+  Collection: String
 }
 
 type Image {
-  thumbnailURL: String
-  imageURL: String
+  ThumbnailURL: String
+  ImageURL: String
 }
 
 type SetData @model @auth(rules: [{allow: public}]) {
   id: ID!
-  number: String
-  numberVariant: Int
-  name: String
-  year: Int
-  theme: String
-  themeGroup: String
-  subtheme: String
-  category: String
-  released: Boolean
-  pieces: Int
-  minifigs: Int
-  image: Image
-  bricksetURL: String
-  collection: Collection
-  collections: Collections
+  Number: String
+  NumberVariant: Int
+  Name: String
+  Year: Int
+  Theme: String
+  ThemeGroup: String
+  Subtheme: String
+  Category: String
+  Released: Boolean
+  Pieces: Int
+  Minifigs: Int
+  Image: Image
+  BricksetURL: String
+  Collection: Collection
+  Collections: Collections
   LEGOCom: LEGOCom
-  rating: Float
-  reviewCount: Int
-  packagingType: String
-  availability: String
-  instructionsCount: Int
-  additionalImageCount: Int
-  ageRange: AgeRange
-  dimensions: Dimensions
-  barcode: Barcode
-  extendedData: ExtendedData
-  lastUpdated: String
+  Rating: Float
+  ReviewCount: Int
+  PackagingType: String
+  Availability: String
+  InstructionsCount: Int
+  AdditionalImageCount: Int
+  AgeRange: AgeRange
+  Dimensions: Dimensions
+  Barcode: Barcode
+  ExtendedData: ExtendedData
+  LastUpdated: String
 }
  
