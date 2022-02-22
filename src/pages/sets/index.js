@@ -17,13 +17,13 @@ const SetsList = (props) => {
 
     const handleSaveSet = async () => {
         const newSetToSave = {
-            image: set.sets[0].image.imageURL,
-            number: set.sets[0].number,
-            theme: set.sets[0].theme,
-            name: set.sets[0].name,
-            retailPrice: set.sets[0].LEGOCom.US.retailPrice,
-            pieces: set.sets[0].pieces, 
-            description: set.sets[0].extendedData.description
+            Image: set.sets[0].image.imageURL,
+            Number: set.sets[0].number,
+            Theme: set.sets[0].theme,
+            Name: set.sets[0].name,
+            RetailPrice: set.sets[0].LEGOCom.US.retailPrice,
+            Pieces: set.sets[0].pieces, 
+            Description: set.sets[0].extendedData.description
         }
 
         try {
