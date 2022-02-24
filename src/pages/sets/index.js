@@ -22,6 +22,9 @@ const SetsList = (props) => {
             Theme: setsList.theme,
             Name: setsList.name,
             Pieces: setsList.pieces
+            //Image: setsList.Image.ImageURL
+            //Description: setsList.ExtendedData.Description
+            //RetailPrice: setsList.LEGOCom.US.RetailPrice
         }
 
         try {
