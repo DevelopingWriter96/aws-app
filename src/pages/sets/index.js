@@ -44,17 +44,16 @@ const SetsList = (props) => {
     return (
         <>
             <ResponsiveAppBar />
-            <Box sx={{display: 'flex', justifyContent: 'center' }
-            }>
-                {setsList.map((set) =>{(
+            <Box sx={{display: 'flex', flexWrap: 'wrap' }}>
+                {setsList.map((set) => (
                 <Card key={set.id} sx={{ maxWidth: 400}}>
                 <CardMedia component='img' image={set.Image?.ImageURL} title = {set.Name} />
                 <CardContent>
                     <Box>
                         <Typography variant="subtitle1">{set.Number}</Typography>
-                        <Typography variant="subtitle1">'Lego '{set.Theme}</Typography>
+                        <Typography variant="subtitle1">Lego {set.Theme}</Typography>
                         <Typography variant="subtitle1">{set.Name}</Typography>
-                        <Typography variant="subtitle1">'$'{set.LEGOCom?.US?.RetailPrice}' US Retail'</Typography>
+                        <Typography variant="subtitle1"> $ {set.LEGOCom?.US?.RetailPrice} US Retail</Typography>
                         <Typography variant="subtitle1">{set.Pieces}</Typography>
                         <Typography variant="subtitle2">{set.ExtendedData?.Description}</Typography>
                     </Box>
@@ -68,27 +67,28 @@ const SetsList = (props) => {
                     </IconButton>
                 </CardActions>
                 </Card>
-            )})}
+            ))}
             </Box>       
         </>
     )
 }
 
 export async function getStaticProps() {
+    let setsList = []
     try {
         const response = await API.graphql({
             query: listSetData,
             autMode: 'API_KEY'
         })
-        console.log('Retrieved a list of sets from AWS')
-        console.log(response)
-        return {
-            props: {
-                setsList: response.data.listSetData.items
-            }
-        }
+        setsList = response.data.listSetData.items
+    
     } catch (err) {
         console.log("Retrieve set list error", err)
+    }
+    return {
+        props: {
+            setsList: setsList
+        }
     }
 
     /* const fetchedSet = await getSetData('75218')
