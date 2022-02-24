@@ -48,15 +48,15 @@ const SetsList = (props) => {
             }>
                 {setsList.map((set) =>{(
                 <Card key={set.id} sx={{ maxWidth: 400}}>
-                <CardMedia component='img' image={set.image.imageURL} title = {set.name} />
+                <CardMedia component='img' image={set.Image?.ImageURL} title = {set.name} />
                 <CardContent>
                     <Box>
-                        <Typography variant="subtitle1">{set.number}</Typography>
-                        <Typography variant="subtitle1">Lego {set.theme}</Typography>
-                        <Typography variant="subtitle1">{set.name}</Typography>
-                        <Typography variant="subtitle1">${set.LEGOCom.US.retailPrice} retail</Typography>
-                        <Typography variant="subtitle1">{set.pieces} pieces</Typography>
-                        <Typography variant="subtitle2">{set.extendedData.description}</Typography>
+                        <Typography variant="subtitle1">{set.Number}</Typography>
+                        <Typography variant="subtitle1">Lego {set.Theme}</Typography>
+                        <Typography variant="subtitle1">{set.Name}</Typography>
+                        <Typography variant="subtitle1">"$"{set.LEGOCom?.US?.retailPrice}" retail"</Typography>
+                        <Typography variant="subtitle1">{set.Pieces} pieces</Typography>
+                        <Typography variant="subtitle2">{set.ExtendedData?.Description}</Typography>
                     </Box>
                 </CardContent>
                 <CardActions>
@@ -84,7 +84,7 @@ export async function getStaticProps() {
         console.log(response)
         return {
             props: {
-                setList: response.data.listSetData.items
+                setsList: response.data.listSetData.items
             }
         }
     } catch (err) {
