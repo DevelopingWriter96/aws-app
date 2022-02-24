@@ -52,9 +52,9 @@ const SetsList = (props) => {
                 <CardContent>
                     <Box>
                         <Typography variant="subtitle1">{set.Number}</Typography>
-                        <Typography variant="subtitle1">{set.Theme}</Typography>
+                        <Typography variant="subtitle1">'Lego '{set.Theme}</Typography>
                         <Typography variant="subtitle1">{set.Name}</Typography>
-                        <Typography variant="subtitle1">{set.LEGOCom?.US?.RetailPrice}</Typography>
+                        <Typography variant="subtitle1">'$'{set.LEGOCom?.US?.RetailPrice}' US Retail'</Typography>
                         <Typography variant="subtitle1">{set.Pieces}</Typography>
                         <Typography variant="subtitle2">{set.ExtendedData?.Description}</Typography>
                     </Box>
