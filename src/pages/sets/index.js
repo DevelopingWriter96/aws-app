@@ -12,16 +12,16 @@ Amplify.configure(config)
 
 const SetsList = (props) => {
 
-    const { setList } = props
+    const { set } = props
 
-    console.log(setList.sets[0])
+    console.log(set)
 
     const handleSaveSet = async () => {
         const newSetToSave = {
-            Number: set.sets[0].number,
-            Theme: set.sets[0].theme,
-            Name: set.sets[0].name,
-            Pieces: set.sets[0].pieces
+            Number: set.number,
+            Theme: set.theme,
+            Name: set.name,
+            Pieces: set.pieces
         }
 
         try {
@@ -48,15 +48,15 @@ const SetsList = (props) => {
             }>
                 {setList.map((set) =>{(
                 <Card key={set.id} sx={{ maxWidth: 400}}>
-                <CardMedia component='img' image={set.sets[0].image.imageURL} title = {set.sets[0].name} />
+                <CardMedia component='img' image={set.image.imageURL} title = {set.name} />
                 <CardContent>
                     <Box>
-                        <Typography variant="subtitle1">{set.sets[0].number}</Typography>
-                        <Typography variant="subtitle1">Lego {set.sets[0].theme}</Typography>
-                        <Typography variant="subtitle1">{set.sets[0].name}</Typography>
-                        <Typography variant="subtitle1">${set.sets[0].LEGOCom.US.retailPrice} retail</Typography>
-                        <Typography variant="subtitle1">{set.sets[0].pieces} pieces</Typography>
-                        <Typography variant="subtitle2">{set.sets[0].extendedData.description}</Typography>
+                        <Typography variant="subtitle1">{set.number}</Typography>
+                        <Typography variant="subtitle1">Lego {set.theme}</Typography>
+                        <Typography variant="subtitle1">{set.name}</Typography>
+                        <Typography variant="subtitle1">${set.LEGOCom.US.retailPrice} retail</Typography>
+                        <Typography variant="subtitle1">{set.pieces} pieces</Typography>
+                        <Typography variant="subtitle2">{set.extendedData.description}</Typography>
                     </Box>
                 </CardContent>
                 <CardActions>
