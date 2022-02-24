@@ -3,12 +3,11 @@
   "serviceConfiguration": {
     "apiName": "legoapp",
     "serviceName": "AppSync",
-    "gqlSchemaPath": "C:\\Users\\stace.LAPTOP-LTCORPG6\\UVU_Spring_2022\\DGM4790\\4790-main-aws\\amplify\\backend\\api\\legoapp\\schema.graphql",
+    "gqlSchemaPath": "/tmp/amplify-ea101617-0cb2-4cef-a11a-3e3045955cf6/amplify/backend/api/legoapp/schema.graphql",
     "defaultAuthType": {
       "mode": "API_KEY",
-      "expirationTime": 120,
-      "apiKeyExpirationDate": "2022-06-22T03:25:44.432Z",
-      "keyDescription": "api key description"
+      "keyDescription": "api key description",
+      "expirationTime": 30
     },
     "additionalAuthTypes": [
       {

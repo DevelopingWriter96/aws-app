@@ -12,16 +12,16 @@ Amplify.configure(config)
 
 const SetsList = (props) => {
 
-    const { set } = props
+    const { setsList } = props
 
-    console.log(set)
+    console.log(setsList)
 
     const handleSaveSet = async () => {
         const newSetToSave = {
-            Number: set.number,
-            Theme: set.theme,
-            Name: set.name,
-            Pieces: set.pieces
+            Number: setsList.number,
+            Theme: setsList.theme,
+            Name: setsList.name,
+            Pieces: setsList.pieces
         }
 
         try {
@@ -46,7 +46,7 @@ const SetsList = (props) => {
             <ResponsiveAppBar />
             <Box sx={{display: 'flex', justifyContent: 'center' }
             }>
-                {setList.map((set) =>{(
+                {setsList.map((set) =>{(
                 <Card key={set.id} sx={{ maxWidth: 400}}>
                 <CardMedia component='img' image={set.image.imageURL} title = {set.name} />
                 <CardContent>

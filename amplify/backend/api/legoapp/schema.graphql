@@ -65,7 +65,7 @@ type Image {
 }
 
 type SetData @model @auth(rules: [{allow: public}]) {
-  id: ID!
+  id: ID
   Number: String
   NumberVariant: Int
   Name: String
