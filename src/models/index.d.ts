@@ -1,5 +1,7 @@
 import { ModelInit, MutableModel, PersistentModelConstructor } from "@aws-amplify/datastore";
 
+
+
 export declare class ExtendedData {
   readonly Tags?: (string | null)[];
   readonly Description?: string;
