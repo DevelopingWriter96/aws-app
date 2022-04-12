@@ -1,6 +1,48 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
+export const onCreateImage = /* GraphQL */ `
+  subscription OnCreateImage {
+    onCreateImage {
+      ThumbnailURL
+      ImageURL
+      id
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onUpdateImage = /* GraphQL */ `
+  subscription OnUpdateImage {
+    onUpdateImage {
+      ThumbnailURL
+      ImageURL
+      id
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onDeleteImage = /* GraphQL */ `
+  subscription OnDeleteImage {
+    onDeleteImage {
+      ThumbnailURL
+      ImageURL
+      id
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
 export const onCreateSetData = /* GraphQL */ `
   subscription OnCreateSetData {
     onCreateSetData {
@@ -19,6 +61,12 @@ export const onCreateSetData = /* GraphQL */ `
       Image {
         ThumbnailURL
         ImageURL
+        id
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
       }
       BricksetURL
       Collection {
@@ -100,6 +148,12 @@ export const onUpdateSetData = /* GraphQL */ `
       Image {
         ThumbnailURL
         ImageURL
+        id
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
       }
       BricksetURL
       Collection {
@@ -181,6 +235,12 @@ export const onDeleteSetData = /* GraphQL */ `
       Image {
         ThumbnailURL
         ImageURL
+        id
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
       }
       BricksetURL
       Collection {

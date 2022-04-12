@@ -59,7 +59,7 @@ type Collection {
   Collection: String
 }
 
-type Image {
+type Image @model {
   ThumbnailURL: String
   ImageURL: String
 }

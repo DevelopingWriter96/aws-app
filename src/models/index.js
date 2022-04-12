@@ -4,9 +4,10 @@ import { schema } from './schema';
 
 
 
-const { SetData, ExtendedData, Barcode, Dimensions, AgeRange, DE, CA, UK, US, LEGOCom, Collections, Collection, Image } = initSchema(schema);
+const { Image, SetData, ExtendedData, Barcode, Dimensions, AgeRange, DE, CA, UK, US, LEGOCom, Collections, Collection } = initSchema(schema);
 
 export {
+  Image,
   SetData,
   ExtendedData,
   Barcode,
@@ -18,6 +19,5 @@ export {
   US,
   LEGOCom,
   Collections,
-  Collection,
-  Image
+  Collection
 };

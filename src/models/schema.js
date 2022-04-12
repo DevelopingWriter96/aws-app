@@ -1,5 +1,55 @@
 export const schema = {
     "models": {
+        "Image": {
+            "name": "Image",
+            "fields": {
+                "id": {
+                    "name": "id",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "ThumbnailURL": {
+                    "name": "ThumbnailURL",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "ImageURL": {
+                    "name": "ImageURL",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "createdAt": {
+                    "name": "createdAt",
+                    "isArray": false,
+                    "type": "AWSDateTime",
+                    "isRequired": false,
+                    "attributes": [],
+                    "isReadOnly": true
+                },
+                "updatedAt": {
+                    "name": "updatedAt",
+                    "isArray": false,
+                    "type": "AWSDateTime",
+                    "isRequired": false,
+                    "attributes": [],
+                    "isReadOnly": true
+                }
+            },
+            "syncable": true,
+            "pluralName": "Images",
+            "attributes": [
+                {
+                    "type": "model",
+                    "properties": {}
+                }
+            ]
+        },
         "SetData": {
             "name": "SetData",
             "fields": {
@@ -84,15 +134,6 @@ export const schema = {
                     "name": "Minifigs",
                     "isArray": false,
                     "type": "Int",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "Image": {
-                    "name": "Image",
-                    "isArray": false,
-                    "type": {
-                        "nonModel": "Image"
-                    },
                     "isRequired": false,
                     "attributes": []
                 },
@@ -519,26 +560,7 @@ export const schema = {
                     "attributes": []
                 }
             }
-        },
-        "Image": {
-            "name": "Image",
-            "fields": {
-                "ThumbnailURL": {
-                    "name": "ThumbnailURL",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "ImageURL": {
-                    "name": "ImageURL",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                }
-            }
         }
     },
-    "version": "961baa005bb67298104b580054a01fab"
+    "version": "2632e507d288d6ce5c3f1ed532fdc1c6"
 };
