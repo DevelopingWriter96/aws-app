@@ -8,6 +8,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import { createSetData } from "../../graphql/mutations"
 import { listSetData } from "../../graphql/queries"
 
+
 Amplify.configure(config)
 
 const SetsList = (props) => {
