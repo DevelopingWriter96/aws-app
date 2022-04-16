@@ -13,7 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import TextField from '@mui/material/TextField';
 import SearchIcon from '@mui/icons-material/Search';
-import { getSetByNumber } from "../utils/api-util"
+import { getSetData } from "../utils/api-util"
 
 const pages = ['Sets', 'Themes', 'Years'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -44,7 +44,7 @@ const ResponsiveAppBar = () => {
   }
 
   const handleSearch = async () => {
-    const bricksetSet = await getSetByNumber(70003)
+    const bricksetSet = await getSetData('70003')
     setFetchedSet(bricksetSet)
     console.log(bricksetSet);
   }
