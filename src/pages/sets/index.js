@@ -4,7 +4,6 @@ import ResponsiveAppBar from "../../components/ResponsiveAppBar";
 import { Box, Card, CardMedia, CardContent, Typography, CardActions, IconButton } from '@mui/material';
 import SaveIcon from '@mui/icons-material/Save';
 import DeleteIcon from '@mui/icons-material/Delete';
-//import { getSetData } from "../../utils/api-util";
 import { createSetData } from "../../graphql/mutations"
 import { listSetData } from "../../graphql/queries"
 

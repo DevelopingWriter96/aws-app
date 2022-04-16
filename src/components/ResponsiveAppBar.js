@@ -70,6 +70,7 @@ const ResponsiveAppBar = () => {
             label="Search"
             variant="outlined"
             onChange={handleChange}
+            value={searchTerms}
             sx={{ backgroundColor: 'white', flexGrow: 2, mr: 20}} 
           /> 
           </Box>
