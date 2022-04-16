@@ -62,8 +62,8 @@ const ResponsiveAppBar = () => {
           </Box>
 
           <Box>
-            <IconButton>
-              <SearchIcon onClick={handleSearch}/>
+            <IconButton onClick={handleSearch}>
+              <SearchIcon/>
             </IconButton>
           <TextField
             size="small"
