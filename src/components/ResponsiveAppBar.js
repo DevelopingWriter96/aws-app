@@ -13,7 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import TextField from '@mui/material/TextField';
 import SearchIcon from '@mui/icons-material/Search';
-import { getSetData } from "../utils/api-util";
+import { getSetData } from "../pages/api/data";
 
 const pages = ['Sets', 'Themes', 'Years'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
