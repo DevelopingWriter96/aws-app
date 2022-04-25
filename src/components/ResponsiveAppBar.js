@@ -13,7 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import TextField from '@mui/material/TextField';
 import SearchIcon from '@mui/icons-material/Search';
-import { getSetData } from "../pages/api/data";
+// import { getSetData } from "../pages/api/data";
 
 const pages = ['Sets', 'Themes', 'Years'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -44,9 +44,15 @@ const ResponsiveAppBar = () => {
   }
 
   const handleSearch = async () => {
-    const bricksetSet = await getSetData('70003')
-    setFetchedSet(bricksetSet)
-    console.log(bricksetSet);
+    const bricksetSet = await fetch('/api/data', {
+      method: 'POST',
+      body: JSON.stringify({set: '70003'}),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    setFetchedSet(await bricksetSet.json())
+    console.log(fetchedSet);
   }
 
   return (
