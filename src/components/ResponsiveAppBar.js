@@ -56,10 +56,6 @@ const ResponsiveAppBar = () => {
     })
   }
 
-  const handleSaveSet = async () => {
-    setDialog
-  }
-
   return (
     <>
     <AppBar position="static">
