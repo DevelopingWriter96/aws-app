@@ -62,9 +62,6 @@ const SetsList = (props) => {
                     </Box>
                 </CardContent>
                 <CardActions>
-                    <IconButton aria-label="save" onClick={handleSaveSet}>
-                        <SaveIcon/>
-                    </IconButton>
                     <IconButton aria-label="delete" onClick={handleDeleteSet}>
                         <DeleteIcon/>
                     </IconButton>

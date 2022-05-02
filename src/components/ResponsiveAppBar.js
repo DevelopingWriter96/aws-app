@@ -13,27 +13,23 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import TextField from '@mui/material/TextField';
 import SearchIcon from '@mui/icons-material/Search';
-// import { getSetData } from "../pages/api/data";
+import SetFoundDialog from './setFoundDialogue';
 
 const pages = ['Sets', 'Themes', 'Years'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const ResponsiveAppBar = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const [fetchedSet, setFetchedSet] = React.useState({})
+  const [searchTerm, setSearchTerm] = React.useState("")
+  const [dialog, setDialog] = React.useState({
+    isOpen: false,
+    set: undefined,
+  })
 
-  const handleOpenNavMenu = (event) => {
-      console.log(event.currentTarget)
-    setAnchorElNav(event.currentTarget);
-  };
   const handleOpenUserMenu = (event) => {
       console.log(event.currentTarget)
     setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElUser(null);
   };
 
   const handleCloseUserMenu = () => {
@@ -41,21 +37,27 @@ const ResponsiveAppBar = () => {
   };
 
   const handleChange = () => {
+    setSearchTerm(event.target.value)
   }
 
   const handleSearch = async () => {
     const bricksetSet = await fetch('/api/data', {
       method: 'POST',
-      body: JSON.stringify({set: '70003'}),
+      body: JSON.stringify({set: searchTerm}),
       headers: {
         'Content-Type': 'application/json'
       }
     })
     setFetchedSet(await bricksetSet.json())
     console.log(fetchedSet);
+    setDialog({
+      isOpen: true,
+      set: fetchedSet,
+    })
   }
 
   return (
+    <>
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -75,7 +77,8 @@ const ResponsiveAppBar = () => {
             size="small"
             label="Search"
             variant="outlined"
-            onChange={handleChange}
+              onChange={handleChange}
+              value={searchTerm}
             sx={{ backgroundColor: 'white', flexGrow: 2, mr: 20}} 
           /> 
           </Box>
@@ -112,6 +115,8 @@ const ResponsiveAppBar = () => {
         </Toolbar>
       </Container>
     </AppBar>
+    <SetFoundDialog open={dialog.isOpen} set={fetchedSet}/>
+    </>
   );
 };
 export default ResponsiveAppBar;
