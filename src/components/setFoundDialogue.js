@@ -2,7 +2,7 @@ import {Box, Card, CardContent, CardMedia, Dialog, Typography, CardActions, Icon
 import SaveIcon from '@mui/icons-material/Save';
 
 const SetFoundDialog = (props) => {
-    const { open } = props
+    const { open, set, onSaveSet } = props
 
     return (
         <Dialog maxWidth="sm" open={open}>
@@ -19,7 +19,7 @@ const SetFoundDialog = (props) => {
                     </Box>
                 </CardContent>
                 <CardActions>
-                    <IconButton aria-label="save set" onClick={handleSaveSet}>
+                    <IconButton aria-label="save set" onClick={onSaveSet}>
                         <SaveIcon/>
                     </IconButton>
                 </CardActions>
