@@ -13,6 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import TextField from '@mui/material/TextField';
 import SearchIcon from '@mui/icons-material/Search';
+import { createSetData } from '../graphql/mutations';
 import SetFoundDialog from './setFoundDialogue';
 
 const pages = ['Sets', 'Themes', 'Years'];
@@ -53,6 +54,15 @@ const ResponsiveAppBar = () => {
     setDialog({
       isOpen: true,
       set: fetchedSet,
+    })
+  }
+
+  const handleSaveSet = async () => {
+  }
+
+  const handleCloseDialog = () => {
+    setDialog({
+      isOpen: false
     })
   }
 
@@ -115,7 +125,7 @@ const ResponsiveAppBar = () => {
         </Toolbar>
       </Container>
     </AppBar>
-    <SetFoundDialog open={dialog.isOpen} set={fetchedSet}/>
+    <SetFoundDialog open={dialog.isOpen} set={fetchedSet} onClose={handleCloseDialog} onSaveSet={handleSaveSet}/>
     </>
   );
 };
