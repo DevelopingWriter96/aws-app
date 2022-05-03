@@ -17,6 +17,9 @@
           "appId": "d3oqnb6mk8mnqd",
           "type": "manual"
         }
+      },
+      "auth": {
+        "legoappbffa1580": {}
       }
     }
   }
