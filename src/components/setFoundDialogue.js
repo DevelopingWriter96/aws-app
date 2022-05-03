@@ -2,10 +2,10 @@ import {Box, Card, CardContent, CardMedia, Dialog, Typography, CardActions, Icon
 import SaveIcon from '@mui/icons-material/Save';
 
 const SetFoundDialog = (props) => {
-    const { open, set, onSaveSet } = props
+    const { open, set, onSaveSet, onClose } = props
 
     return (
-        <Dialog maxWidth="sm" open={open}>
+        <Dialog maxWidth="sm" open={open} onClose={onClose}>
             <Card key={set.id} sx={{ maxWidth: 400, m:1 }}>
                 <CardMedia component='img' image={set.Image?.ImageURL} title = {set.Name} />
                 <CardContent>
