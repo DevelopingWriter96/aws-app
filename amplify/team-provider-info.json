@@ -1,0 +1,26 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-testapp-staging-191330-authRole",
+      "UnauthRoleArn": "arn:aws:iam::101714149437:role/amplify-testapp-staging-191330-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::101714149437:role/amplify-testapp-staging-191330-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-testapp-staging-191330-deployment",
+      "UnauthRoleName": "amplify-testapp-staging-191330-unauthRole",
+      "StackName": "amplify-testapp-staging-191330",
+      "StackId": "arn:aws:cloudformation:us-west-2:101714149437:stack/amplify-testapp-staging-191330/5b03c740-934a-11ec-9223-068d3c6ca933",
+      "AmplifyAppId": "d3oqnb6mk8mnqd"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d3oqnb6mk8mnqd",
+          "type": "manual"
+        }
+      },
+      "auth": {
+        "legoappbffa1580": {}
+      }
+    }
+  }
+}

@@ -11,45 +11,92 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import TextField from '@mui/material/TextField';
+import SearchIcon from '@mui/icons-material/Search';
+import { createSetData } from '../graphql/mutations';
+import SetFoundDialog from './setFoundDialogue';
 
 const pages = ['Sets', 'Themes', 'Years'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const ResponsiveAppBar = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [fetchedSet, setFetchedSet] = React.useState({})
+  const [searchTerm, setSearchTerm] = React.useState("")
+  const [dialog, setDialog] = React.useState({
+    isOpen: false,
+    set: undefined,
+  })
 
-  const handleOpenNavMenu = (event) => {
-      console.log(event.currentTarget)
-    setAnchorElNav(event.currentTarget);
-  };
   const handleOpenUserMenu = (event) => {
       console.log(event.currentTarget)
     setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
   };
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
 
+  const handleChange = () => {
+    setSearchTerm(event.target.value)
+  }
+
+  const handleSearch = async () => {
+    const bricksetSet = await fetch('/api/data', {
+      method: 'POST',
+      body: JSON.stringify({set: searchTerm}),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    setFetchedSet(await bricksetSet.json())
+    console.log(fetchedSet);
+    setDialog({
+      isOpen: true,
+      set: fetchedSet,
+    })
+  }
+
+  const handleSaveSet = async () => {
+  }
+
+  const handleCloseDialog = () => {
+    setDialog({
+      isOpen: false
+    })
+  }
+
   return (
+    <>
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+            <Tooltip title="Show Sets">
               <Button sx={{ my: 2, color: 'white', display: 'block' }}>
               <Link href="/sets">Sets</Link>
               </Button>
+            </Tooltip>
+          </Box>
+
+          <Box>
+            <IconButton onClick={handleSearch}>
+              <SearchIcon/>
+            </IconButton>
+          <TextField
+            size="small"
+            label="Search"
+            variant="outlined"
+              onChange={handleChange}
+              value={searchTerm}
+            sx={{ backgroundColor: 'white', flexGrow: 2, mr: 20}} 
+          /> 
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="Remy Sharp" src="*" />
               </IconButton>
             </Tooltip>
             <Menu
@@ -78,6 +125,8 @@ const ResponsiveAppBar = () => {
         </Toolbar>
       </Container>
     </AppBar>
+    <SetFoundDialog open={dialog.isOpen} set={fetchedSet} onClose={handleCloseDialog} onSaveSet={handleSaveSet}/>
+    </>
   );
 };
 export default ResponsiveAppBar;
